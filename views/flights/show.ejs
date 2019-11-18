@@ -1,0 +1,19 @@
+<%- include('../partials/header')%>
+
+<h1>Flight Information</h1>
+
+<div class="form-layout">
+    <label>Airline</label>
+    <div><%= flight.airline %></div>
+    <label>Flight Number</label>
+    <div><%= flight.flightNo %></div>
+    <label>Departure</label>
+    <div><%= flight.departs %></div>
+    <label>Airport</label>
+    <div><%= flight.airport %></div>
+    <label>Destinations</label>
+    <div><%= flight.destinations %></div>
+</div>
+
+
+<%- include('../partials/footer')%>

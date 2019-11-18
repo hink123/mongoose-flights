@@ -1,26 +1,24 @@
 <%- include('../partials/header') %>
 
-<form action="/flights" method="POST" name="flight">
-    <table>
-        <thead>
-            <th>Airline</th>
-            <th>Flight Number</th>
-            <th>Departure</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <input type="text" name="airline">
-                </td>
-                <td>
-                    <input type="text" name="flightNo">
-                </td>
-                <td>
-                    <input type="datetime-local" name="departs">
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<form action="/flights" method="POST" name="flight" class="form-layout">
+
+    <label>Airline</label>
+    <input type="text" name="airline">
+    <label>Flight Number</label>
+    <input type="text" name="flightNo">
+    <label>Departure</label>
+    <input type="datetime-local" name="departs">
+    <label>Airport</label>
+    <select name="airport">
+        <option value="AUS">AUS</option>
+        <option value="DAL">DAL</option>
+        <option value="LAX">LAX</option>
+        <option value="SAN">SAN</option>
+        <option value="SEA">SEA</option>
+    </select>
+
+
+
     <button type='submit'>Submit</button>
 </form>
 
