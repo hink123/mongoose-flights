@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flights</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <form action="/flights" method="POST" name="flight">
+        <table>
+            <thead>
+                <th>Airline</th>
+                <th>Flight Number</th>
+                <th>Departure</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" name="airline">
+                    </td>
+                    <td>
+                        <input type="text" name="flightNo">
+                    </td>
+                    <td>
+                        <input type="datetime-local" name="departs">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type='submit'>Submit</button>
+    </form>
+    <a href="/flights">Home</a>
+  </body>
+</html>

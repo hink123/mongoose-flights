@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
+var flightsCtlr = require('../controllers/flights');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+/* GET /flights listing. */
+router.get('/', flightsCtlr.index);
+router.get('/new', flightsCtlr.new);
+router.post('/', flightsCtlr.create);
 
 module.exports = router;

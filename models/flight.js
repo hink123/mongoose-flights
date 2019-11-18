@@ -16,10 +16,10 @@ var flightSchema = new Schema({
         default: function() {
             let currentDate = new Date();
             let year = currentDate.getFullYear();
-            let month = currentDate.getMonth();
-            let day = currentDate.getDate();
-            return new Date(year + 1, month, day);
+            currentDate.setFullYear(year + 1);
+            return currentDate;
         }
     }
 });
 
+module.exports = mongoose.model('Flight', flightSchema);
