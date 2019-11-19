@@ -7,7 +7,8 @@ var destinationSchema = new Schema ({
         enum: ['AUS', 'DAL', 'LAX', 'SAN', 'SEA']
     },
     arrival: {
-        type: Date
+        type: Date,
+        required: true
     }
 });
 

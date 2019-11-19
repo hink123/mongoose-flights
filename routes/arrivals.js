@@ -4,4 +4,5 @@ var arrivalsCtlr = require('../controllers/arrivals');
 
 router.post('/flights/:id/arrivals', arrivalsCtlr.create);
 
+
 module.exports = router;
