@@ -1,4 +1,5 @@
 var Ticket = require('../models/ticket');
+var Flight = require('../models/flight');
 
 module.exports = {
     new: newTicket,
@@ -11,9 +12,8 @@ function newTicket(req, res) {
 }
 
 function create(req, res) {
-    console.log("Hey there: " + req.body);
-    req.body.flight = req.body.id;
+    req.body.flight = req.params.id;
     Ticket.create(req.body, function(err, ticket) {
-        res.redirect(`/flights/${ticket.flight}`)
+        res.redirect(`/flights/${req.body.flight}`)
     });
 }
