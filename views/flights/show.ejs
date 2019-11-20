@@ -59,6 +59,7 @@
     <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
+                <th> </th>
                 <th>Seat</th>
                 <th>Price</th>
                 <th>Flight</th>
@@ -67,8 +68,13 @@
         <tbody>
             <% tickets.forEach(function(t) { %>
                 <tr>
+                    <td>
+                        <form action="/tickets/<%= t._id %>?_method=DELETE" method = "POST" >
+                            <button type="submit">X</button>
+                        </form>
+                    </td>
                     <td><%= t.seat %></td>
-                    <td><%= t.price %></td>
+                    <td>$<%= t.price %></td>
                     <td><%= t.flight %></td>
                 </tr>
                 <% }) %>
