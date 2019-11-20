@@ -13,7 +13,7 @@ function newTicket(req, res) {
 
 function create(req, res) {
     req.body.flight = req.params.id;
-    Ticket.create(req.body, function(err, ticket) {
+    Ticket.create(req.body, function(err) {
         res.redirect(`/flights/${req.body.flight}`)
     });
 }
