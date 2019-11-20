@@ -38,19 +38,23 @@
     <% } %>
 </div>
 
-<form action="/flights/<%= flight._id %>/arrivals" method="POST">
-    <label>Airport</label>
-    <select name="airport">
-        <option value="AUS">AUS</option>
-        <option value="DAL">DAL</option>
-        <option value="LAX">LAX</option>
-        <option value="SAN">SAN</option>
-        <option value="SEA">SEA</option>
-    </select>
-    <label>Arrival</label>
-    <input type="datetime-local" name="arrival">
-    <input type="submit" value="Add Arrival">
-</form>
+<div class="input-field">
+    <form action="/flights/<%= flight._id %>/arrivals" method="POST">
+        <label>Airport</label>
+        <select name="airport">
+            <option value="AUS">AUS</option>
+            <option value="DAL">DAL</option>
+            <option value="LAX">LAX</option>
+            <option value="SAN">SAN</option>
+            <option value="SEA">SEA</option>
+        </select>
+        <div>
+            <label>Arrival</label>
+            <input type="datetime-local" name="arrival">
+            <input type="submit" value="Add Arrival">
+        </div>
+    </form>
+</div>
 
 <br><br>
 
